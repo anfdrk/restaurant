@@ -87,10 +87,6 @@ nav {
   padding: .5rem 1rem;
 }
 
-.nav-btn:hover {
-  transform: scale(1.05);
-}
-
 .nav-btn:active {
   transform: translateY(1px);
 }
@@ -104,17 +100,15 @@ nav {
   color: #ff4e00;
 }
 
-.main {
+main {
   flex: 1;
   padding: 0 2rem 2rem;
-  display: grid;
 }
 
 .home {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .home h1 {
@@ -147,11 +141,10 @@ nav {
 }
 
 .order-btn:hover {
-  transform: scale(1.05);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .order-btn:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(1px);
+  transform: translateY(2px);
 }
