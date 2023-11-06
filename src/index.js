@@ -11,6 +11,7 @@ function initializeWebsite() {
   renderHeader();
   content.append(main);
   renderHome();
+  renderMenu();
   document.querySelector('.nav-btn span').classList.add('active');
 }
 

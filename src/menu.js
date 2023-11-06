@@ -4,11 +4,33 @@ function renderMenu() {
   main.innerHTML = '';
   main.className = '';
   main.classList.add('menu');
-  
-  const p = createHtmlElement('p', [], 
-  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quo architecto ipsum magnam eum adipisci dicta blanditiis nam! Voluptate doloribus qui aliquid ut minima fugit distinctio neque beatae numquam recusandae.');
 
-  main.append(p);
+  main.appendChild(createMenuItem(
+    'Sushi Roll',
+    '10.99 $'
+  ));
+  main.appendChild(createMenuItem(
+    'Onigiri',
+    '15.99 $'
+  ));
+  main.appendChild(createMenuItem(
+    'Spring Roll',
+    '19.99 $'
+  ));
+}
+
+function createMenuItem(name, price) {
+  const menuItem = createHtmlElement('div', ['menu-item']);
+  const foodName = createHtmlElement('h2', [], name);
+  const foodPrice = createHtmlElement('p', [], price);
+  
+  const foodImage = createHtmlElement('img');
+  foodImage.src = `images/${name.toLowerCase().replace(/\s+/g, '-')}.png`;
+  foodImage.alt = `${name}`;
+
+  menuItem.append(foodImage, foodName, foodPrice);
+
+  return menuItem;
 }
 
 export { renderMenu };

@@ -11,7 +11,7 @@ function renderHome() {
   const paragraph = createHtmlElement('p', [], 
   'Enjoy a good dinner with the best dishes in the restourant and improve your day.');
   const img = document.createElement('img');
-  img.src = 'images/sushi-rolls-1.png';
+  img.src = 'images/sushi-rolls-home.png';
   const orderBtn = createHtmlElement('button', ['order-btn'], 'Order');
 
   orderBtn.addEventListener('click', () => {
