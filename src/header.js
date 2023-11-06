@@ -9,8 +9,6 @@ function renderHeader() {
   nav.append(homeBtn, menuBtn, contactBtn);
   header.append(logo, nav);
   content.append(header);
-
-  return header;
 }
 
 function createNavButtons() {

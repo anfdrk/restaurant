@@ -1,4 +1,5 @@
-import { content, main, createHtmlElement } from './index';
+import { main, createHtmlElement } from './index';
+import { renderMenu } from './menu';
 
 function renderHome() {
   main.innerHTML = '';
@@ -11,7 +12,19 @@ function renderHome() {
   'Enjoy a good dinner with the best dishes in the restourant and improve your day.');
   const img = document.createElement('img');
   img.src = 'images/sushi-rolls-1.png';
-  const orderBtn = createHtmlElement('button', ['order-btn'], 'Order'); // добавить обработчик
+  const orderBtn = createHtmlElement('button', ['order-btn'], 'Order');
+
+  orderBtn.addEventListener('click', () => {
+    const navButtons = document.querySelectorAll('.nav-btn span');
+    navButtons.forEach(button => {
+      if (button.textContent !== 'Menu') {
+        button.classList.remove('active');
+      } else {
+        button.classList.add('active');
+      }
+    });
+    renderMenu();
+  })
 
   container.append(title, paragraph, orderBtn);
   main.append(container, img);

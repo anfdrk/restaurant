@@ -4,12 +4,15 @@ import { renderHome } from './home';
 import { renderMenu } from './menu';
 
 const content = document.getElementById('content');
-
-addBackground();
-renderHeader();
 const main = document.createElement('main');
-content.append(main);
-renderHome();
+
+function initializeWebsite() {
+  addBackground();
+  renderHeader();
+  content.append(main);
+  renderHome();
+  document.querySelector('.nav-btn span').classList.add('active');
+}
 
 function handleButtonClick(button, buttonText) {
   const allButtons = document.querySelectorAll('.nav-btn span');
@@ -29,5 +32,7 @@ function createHtmlElement(type, classes, content) {
   
   return element;
 }
+
+initializeWebsite();
 
 export { content, main, createHtmlElement, handleButtonClick };

@@ -1,4 +1,4 @@
-import { content, main, createHtmlElement } from './index';
+import { main, createHtmlElement } from './index';
 
 function renderMenu() {
   main.innerHTML = '';
