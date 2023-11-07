@@ -7,15 +7,15 @@ function renderMenu() {
 
   main.appendChild(createMenuItem(
     'Sushi Roll',
-    '10.99 $'
+    '$10.99'
   ));
   main.appendChild(createMenuItem(
     'Onigiri',
-    '15.99 $'
+    '$15.99'
   ));
   main.appendChild(createMenuItem(
     'Spring Roll',
-    '19.99 $'
+    '$19.99'
   ));
 }
 

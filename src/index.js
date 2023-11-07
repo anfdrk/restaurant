@@ -2,6 +2,7 @@ import { addBackground } from './background';
 import { renderHeader } from './header';
 import { renderHome } from './home';
 import { renderMenu } from './menu';
+import { renderContact } from './contact';
 
 const content = document.getElementById('content');
 const main = document.createElement('main');
@@ -11,7 +12,6 @@ function initializeWebsite() {
   renderHeader();
   content.append(main);
   renderHome();
-  renderMenu();
   document.querySelector('.nav-btn span').classList.add('active');
 }
 
@@ -23,6 +23,7 @@ function handleButtonClick(button, buttonText) {
 
   if (buttonText === 'Home') renderHome();
   if (buttonText === 'Menu') renderMenu();
+  if (buttonText === 'Contact') renderContact();
 }
 
 function createHtmlElement(type, classes, content) {
