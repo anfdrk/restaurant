@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
@@ -171,7 +175,8 @@ main {
 
 .menu-item img {
   position: absolute;
-  top: -30%;
+  top: -20%;
+  max-height: 200px;
 }
 
 .menu-item h2 {
@@ -184,4 +189,34 @@ main {
   color: #ff9800;
   font-size: 1.6rem;
   font-weight: 900;
+}
+
+/* CONTACT */
+
+.contact {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: auto;
+  padding-top: 1rem;
+  border-radius: 24px;
+  background-color: #fff5f18f;
+  box-shadow: 0px 4px 24px 5px rgba(243, 170, 123, 0.40);
+}
+
+.contact p {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.contact img {
+  padding: 1rem;
+  max-height: 500px;
+  border-radius: 25px;
 }
